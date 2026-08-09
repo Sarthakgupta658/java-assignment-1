@@ -1,13 +1,13 @@
-import java.util.Scanner;
+import java.io.*;
 
 class ArrayStatistics {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+    public static void main(String[] args) throws Exception {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int[] arr = new int[10];
         
         System.out.println("Enter 10 integers:");
         for (int i = 0; i < 10; i++) {
-            arr[i] = sc.nextInt();
+            arr[i] = Integer.parseInt(br.readLine());
         }
         
         int max = arr[0];
@@ -35,7 +35,7 @@ class ArrayStatistics {
         double average = (double) sum / 10;
         
         System.out.print("Enter a number to search: ");
-        int searchNum = sc.nextInt();
+        int searchNum = Integer.parseInt(br.readLine());
         boolean found = false;
         
         for (int i = 0; i < 10; i++) {

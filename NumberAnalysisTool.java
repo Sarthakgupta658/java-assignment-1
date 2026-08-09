@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import java.io.*;
 
 class NumberAnalysisTool {
     
@@ -48,10 +48,10 @@ class NumberAnalysisTool {
         return rev;
     }
 
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+    public static void main(String[] args) throws Exception {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         System.out.print("Enter an integer: ");
-        int num = sc.nextInt();
+        int num = Integer.parseInt(br.readLine());
         
         int choice;
         
@@ -65,7 +65,7 @@ class NumberAnalysisTool {
             System.out.println("6. Exit");
             
             System.out.print("Select an option: ");
-            choice = sc.nextInt();
+            choice = Integer.parseInt(br.readLine());
             
             switch (choice) {
                 case 1:
